@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionSystem.Views.EditItemPopUp"
+             CanBeDismissedByTappingOutsideOfPopup="False"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <VerticalStackLayout>
+        <Entry Text="{Binding EnteredName}" Placeholder="Podaj Nazwe" PlaceholderColor="Black" WidthRequest="150"/>
+        <Entry Text="{Binding EnteredDescription}" Placeholder="Wpisz Opis" PlaceholderColor="Black" />
+        <Entry Text="{Binding EnteredPrice}" Placeholder="Podaj Cene" PlaceholderColor="Black" />
+        <Entry Text="{Binding EnteredStatus}" Placeholder="Podaj status" PlaceholderColor="Black" />
+        <Entry Text="{Binding EnteredRating}" Placeholder="Ranking" PlaceholderColor="Black" />
+        <Button Text="Edytuj" Command="{Binding EditItemCommand}"/>
+        <Button Text="Zamknij" Command="{Binding CloseEditPopUpCommand}"/>
+    </VerticalStackLayout>
+</toolkit:Popup>
